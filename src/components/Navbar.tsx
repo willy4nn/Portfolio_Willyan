@@ -5,12 +5,14 @@ const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const windowWidth = useWindowWidth();
 
+  // Fecha o menu caso a tela seja menor que 1024px
   useEffect(() => {
     if (windowWidth > 1024) {
       setMenuOpen(false);
     }
   }, [windowWidth]);
 
+  // Bloqueia o scroll na página quando o menu estiver aberto
   useEffect(() => {
     if (menuOpen) {
       document.body.classList.add('overflow-hidden');
@@ -19,6 +21,7 @@ const Navbar = () => {
     }
   }, [menuOpen]);
 
+  // Alterna o estado do menu
   function toggleMenu() {
     setMenuOpen(!menuOpen);
   }
