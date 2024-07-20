@@ -5,28 +5,28 @@ import './index.css';
 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import Home from './routes/Home';
+import Home from './routes/Home/Home.tsx';
 import About from './routes/About.tsx';
 
 const router = createBrowserRouter([
-	{
-		path: '/',
-		element: <App />,
-		children: [
-			{
-				path: '/',
-				element: <Home />,
-			},
-			{
-				path: 'about',
-				element: <About />,
-			},
-		],
-	},
+  {
+    path: '/',
+    element: <App />,
+    children: [
+      {
+        path: '/',
+        element: <Home />,
+      },
+      {
+        path: 'about',
+        element: <About />,
+      },
+    ],
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
-	<React.StrictMode>
-		<RouterProvider router={router} />
-	</React.StrictMode>
+  <React.StrictMode>
+    <RouterProvider router={router} />
+  </React.StrictMode>,
 );
