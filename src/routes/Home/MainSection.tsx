@@ -3,7 +3,7 @@ import websiteIllustration from '../../assets/images/website.svg';
 
 const MainSection = () => {
   return (
-    <section className="col-span-full flex gap-6">
+    <section className="col-span-full flex gap-6 px-4 py-12 md:px-8 md:py-16 lg:p-16">
       <div className="flex flex-1 flex-col gap-6">
         <div className="flex flex-col gap-4">
           <div className="flex flex-col gap-4">
